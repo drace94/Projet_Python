@@ -10,6 +10,10 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import mpl_toolkits.mplot3d.axes3d as p3
 import random as rd
+import time
+
+# Debut du decompte du temps
+start_time = time.time()
 
 def random(a,b):
     """
@@ -190,6 +194,7 @@ def main(tenseur,t):
         tens[1] = diffusion(tens[1],1)
         tens[3] = diffusion(tens[3],1)
         resultat += [tens.copy()]         # Parce que c'est des pointeurs
+        print("Calcul terminé pour t="+str(t))
     return resultat
 
 # Graphismes
@@ -227,3 +232,6 @@ def affichage(title,donnees):
     anim.save(title+'.mp4', writer="ffmpeg")
 
 affichage("Population infectée",1)
+
+# Affichage du temps d execution
+print("Temps d execution : %s secondes ---" % (time.time() - start_time))
