@@ -194,7 +194,7 @@ def main(tenseur,t):
         tens[1] = diffusion(tens[1],1)
         tens[3] = diffusion(tens[3],1)
         resultat += [tens.copy()]         # Parce que c'est des pointeurs
-        print("Calcul terminé pour t="+str(t))
+        print("Calcul terminé pour t="+str(k))
     return resultat
 
 # Graphismes
