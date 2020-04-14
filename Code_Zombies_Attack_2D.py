@@ -2,7 +2,7 @@
 """
 Created on Mon Apr 13 18:16:50 2020
 
-@author: Gabriel Depaillat
+@author: Gabriel Depaillat, Hugo Valayer
 """
 
 import numpy as np
