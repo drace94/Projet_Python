@@ -133,7 +133,8 @@ def diffusion(M,t):
         Res = np.dot(A1_inv,np.dot(B1,Res))
         #diffusion selon y
         Res = np.dot(A2_inv,np.dot(B2,np.transpose(Res)))
-    return np.array(np.transpose(Res))
+        Res = np.array(np.transpose(Res))
+    return Res
     
 # Definition du modele
 def Model(x, params):
